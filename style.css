@@ -100,10 +100,34 @@ li {
 .main__image {
     display: block;
     margin: 20px auto;
-    max-width: 100%;
+    max-width: 42%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+
+}
+
+.big__images {
+    display: block;
+    margin: 20px auto;
+    max-width: 81%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.small__images {
+    display: block;
+    margin: 20px auto;
+    max-width: 81%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.box {
+    display: flex;
+    align-items: stretch;
 }
 
 .nav__list {
@@ -178,5 +202,9 @@ ins {
 
 .article {
     margin-bottom: 20px;
+}
+
+.center__text {
+    text-align: center;
 }
 

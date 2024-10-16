@@ -1,0 +1,45 @@
+.table {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr); /* Колонки: три равные части */
+    gap: 7px; /* Расстояние между ячейками */
+    margin: 20px 20px 20px 20px;
+    background-color: #f3f9fd; /* Фон таблицы */
+    padding: 15px;
+    border-radius: 7px;
+    
+}
+
+.table__header {
+    font-weight: bold;
+    font-size: 14px; /* Размер шрифта заголовков */
+    text-align: center; /* Горизонтальное выравнивание */
+    padding: 10px;
+    background-color: #34495e; /* Фон для заголовков */
+    color: white; /* Цвет текста заголовков */
+    border-radius: 3px;
+}
+
+.table__row {
+    font-size: 16px; /* Размер шрифта */
+    text-align: center; /* Горизонтальное выравнивание */
+    padding: 10px;
+    background-color: #ecf0f1; /* Фон для нечетных строк */
+    border-radius: 3px;
+}
+
+.table__row--even {
+    background-color: #d1e3ed; /* Фон для четных строк */
+}
+
+/* Адаптивность: таблица будет изменять размер колонок */
+@media (max-width: 850px) {
+    .table {
+        grid-template-columns: 4fr; /* Колонки по одной на малых экранах */
+    }
+}
+
+@media (max-width: 570px) {
+    .albums {
+        display: none;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Создай свое расписание тренировок</title>
+        <link rel="stylesheet" href="schedule.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="coaches.css">
+        <script src="load/load.js" defer></script>
+        <script src="load/location.js" defer></script>
+        <script src="load/schedule.js" defer></script>
+    </head>
+
+    <header class="header">
+        <h3 class="header__title">
+            <div class="header__text">Создай свое расписание тренировок</div>
+        </h3>
+    </header>
+
+    <body class="page">
+        <div class="box">
+            <aside class="aside">
+                <article class="article">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__list-item highlight"><a href="index.html">Назад на главную</a>
+                            <li class="nav__list-item"><a href="schedule.html">Персональное расписание</a>
+                            <li class="nav__list-item"><a href="coaches.html">Тренеры секции</a>
+                            <li class="nav__list-item"><a href="people.html">Кто занимается у нас в секции</a>
+                            <li class="nav__list-item"><a href="competitions.html">Турниры</a>
+                            <li class="nav__list-item"><a href="history.html">История секции</a>
+                            <li class="nav__list-item"><a href="social.html">Наши проекты</a>
+                        </ul>
+                    </nav>
+                </article>
+            </aside>
+        <div class="box">
+            <main class="main">
+                <p class="main__description">
+                    <h3 class="main__title">
+                        Конструктор расписания:</h3>
+                </p>
+                <form id="scheduleForm" class="form">
+                    <label>Время тренировки:
+                        <input type="time" id="sessionTime" required>
+                    </label>
+                    <label>Дата тренировки:
+                        <input type="date" id="sessionDate" required>
+                    </label>
+                    <label>Выбор тренера:
+                        <select id="coach">
+                            <option value="Старцева Арина">Старцева Арина</option>
+                            <option value="Шапиро Михаил">Шапиро Михаил</option>
+                            <option value="Шевякова Полина">Шевякова Полина</option>
+                            <option value="Никулин Василий">Никулин Василий</option>
+                            <option value="Рева Наталья">Рева Наталья</option>
+                            <option value="Сидоренко Александр">Сидоренко Александр</option>
+                            <option value="Грицик Матвей">Грицик Матвей</option>
+                            <option value="Лаврентьева Мария">Лаврентьева Мария</option>
+                            <option value="Губанов Егор">Губанов Егор</option>
+                            <option value="Цымбалюк Ксения">Цымбалюк Ксения</option>
+                            <option value="Варкан Александр">Варкан Александр</option>
+                        </select>
+                    </label>
+
+                    <label>Тип тренировки:
+                        <select id="trainingType">
+                            <option value="Практика">Практика</option>
+                            <option value="Группа по стандарту">Группа по стандарту</option>
+                            <option value="Группа по латине">Группа по латине</option>
+                            <option value="Индивидуальная тренировка">Индивидуальная тренировка</option>
+                            <option value="Растяжка">Растяжка</option>
+                            <option value="Стамина">Стамина</option>
+                        </select>
+                    </label>
+
+                    <button type="submit">Сгенерировать расписание</button>
+                    <button type="button" id="appendSchedule">Дополнить расписание</button>
+                    <button type="button" id="saveSettings">Сохранить настройки</button>
+                    <button type="button" id="loadSettings">Загрузить настройки</button>
+                    <button type="button" class="delete-row-btn" id="deleteRow">Очистить расписание</button>
+                </form>
+                <div id="scheduleContainer" class="schedule-container">
+                </div>
+            </main>
+        </div>
+        </div>
+    </body>
+
+    <footer class="footer">
+        <h4 class="footer__title">Наши контакты</h4>
+            <nav class="footer__nav">
+                <ol class="footer__list">
+                    <p class="footer__list-item">Королева Екатерина - <strong>руководитель</strong> секции
+                        <ins>koroleva@gmail.com</ins></p>
+                    <p class="footer__list-item">Кадырова Арина - <strong>менеджер</strong> секции
+                        <ins>kadyrova.a@gmail.com</ins></p>
+                    <p class="footer__list-item">Старцева Арина - <strong>руководитель тренировочным процессом</strong> секции
+                        <ins>startseva.ar@gmail.com</ins></p>
+                </ol>
+            </nav>
+        <a href="colab.html" class="footer__link"><em>Предложить сотрудничество</em></a>
+    </footer>
+</html>

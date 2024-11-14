@@ -100,10 +100,34 @@ li {
 .main__image {
     display: block;
     margin: 20px auto;
-    max-width: 100%;
+    max-width: 42%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+
+}
+
+.big__images {
+    display: block;
+    margin: 20px auto;
+    max-width: 81%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.small__images {
+    display: block;
+    margin: 20px auto;
+    max-width: 81%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.box {
+    display: flex;
+    align-items: stretch;
 }
 
 .nav__list {
@@ -115,8 +139,28 @@ li {
     background-color: #ecf0f1; 
     padding: 10px;
     margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.1); 
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__list-item a:hover {
+    box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.1); 
+    color: #2c3e50;
+    border-radius: 5px;
+}
+
+.nav__list-item.active {
+    font-weight: bold;
+    color: #2c3e50; /* Пример выделения цвета */
+}
+
+.nav__list-item a.highlight {
+    background-color: #fff; 
+    color: #2c3e50; 
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav__link {
@@ -150,7 +194,7 @@ li {
 }
 
 .footer__link:hover {
-    color: #e67e22;
+    color: #7666EB;
 }
 
 .footer__list-item {
@@ -178,5 +222,9 @@ ins {
 
 .article {
     margin-bottom: 20px;
+}
+
+.center__text {
+    text-align: center;
 }
 

@@ -28,14 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createTable() {
         if (!scheduleContainer.querySelector('.table')) {
-            scheduleContainer.innerHTML = `
-                <div class="table">
-                    <div class="table__header">Дата</div>
-                    <div class="table__header">Время</div>
-                    <div class="table__header">Тренер</div>
-                    <div class="table__header">Тип тренировки</div>
-                    <div class="table__header">Изменить</div>
-                </div>`;
+            const tableDiv = document.createElement('div');
+            tableDiv.classList.add('table');
+            
+            const headers = ['Дата', 'Время', 'Тренер', 'Тип тренировки', 'Изменить'];
+            
+            headers.forEach(headerText => {
+                const headerDiv = document.createElement('div');
+                headerDiv.classList.add('table__header');
+                headerDiv.textContent = headerText;
+                tableDiv.appendChild(headerDiv);
+            });
+            
+            scheduleContainer.appendChild(tableDiv);
         }
     }
 

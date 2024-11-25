@@ -46,6 +46,12 @@
     border-radius: 3px;
 }
 
+@media (max-width: 850px) {
+    .table {
+        grid-template-columns: 5fr; 
+    }
+}
+
 button {
     background-color: #34495e;
     color: white;

@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createTable() {
-        if (!scheduleContainer.querySelector('.table')) {
+        if (!scheduleContainer.querySelector('.schedule-table')) {
             const tableDiv = document.createElement('div');
-            tableDiv.classList.add('table');
+            tableDiv.classList.add('schedule-table');
             
             const headers = ['Дата', 'Время', 'Тренер', 'Тип тренировки', 'Изменить'];
             
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="delete-row-btn">Удалить</button>
             </div>`;
         
-        scheduleContainer.querySelector('.table').innerHTML += rowHTML;
+        scheduleContainer.querySelector('.schedule-table').innerHTML += rowHTML;
 
         saveTableToLocalStorage();
 
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Добавляем обработчики событий на кнопки удаления
     function addDeleteButtonsEventListeners() {
         const deleteButtons = document.querySelectorAll('.delete-row-btn');
+        console.log(1)
         deleteButtons.forEach((button, index) => {
             button.addEventListener('click', () => deleteRow(index));
         });

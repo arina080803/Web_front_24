@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="load/load.js" defer></script>
         <script src="load/location.js" defer></script>
+        <script src="load/fetch.js" defer></script>
     </head>
 
     <header class="header">
@@ -131,7 +132,16 @@
                     Индивидуальные тренировки для членов нашей секции <strong>абсолютно бесплатные</strong>!
                 </p>
                 <img class="big__images" src="photos/privat_training.jpg" alt="Dance Team">
-            </main>
+                <p class="main__benefits">
+                    Отзывы
+                </p>
+                <div id="comments-section" class="comments-section">
+                    <div id="preloader" class="preloader">
+                        <img src="photos/loading.gif" alt="Loading...">
+                    </div>
+                    <div id="comments-container" class="comments-container"></div>
+                </div> 
+            </main>           
         </div>
         </div>
     </body>
